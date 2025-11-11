@@ -1,0 +1,16 @@
+[build]
+  # Comando para instalar dependências
+  command = "npm run build"
+  
+  # Diretório onde o Netlify deve executar o build (raiz do projeto)
+  base = "."
+  
+  # Diretório de saída do build (onde o Vite gera os arquivos estáticos)
+  publish = "dist"
+
+# Configurações de redirecionamento para SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
