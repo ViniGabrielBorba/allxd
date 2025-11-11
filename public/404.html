@@ -7,7 +7,9 @@
     <script>
       // Redireciona para index.html para suportar SPA no GitHub Pages
       var path = window.location.pathname;
-      var newPath = '/allxd' + (path === '/' ? '/index.html' : path);
+      var segments = path.split('/').filter(Boolean);
+      var repoName = segments[0] || 'allxd';
+      var newPath = '/' + repoName + '/index.html';
       window.location.replace(newPath);
     </script>
   </head>
